@@ -1,0 +1,94 @@
+/* Colores */
+
+:root {
+  --primary: #add681;
+  --primary-light: #e0ffb1;
+  --primary-dark: #7ca453;
+  --secondary: #ffe0b2;
+  --secondary-light: #ffffe4;
+  --secondary-dark: #cbae82;
+}
+
+/* General */
+
+html {
+  background-color: var(--secondary-light);
+}
+
+body {
+  font-family: Montserrat, Roboto, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  margin: 0;
+}
+
+@keyframes fade_out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade_out {
+  animation: fade_out 0.5s;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+/* Imagen */
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+svg {
+  padding: 10px;
+  width: 50vw;
+  height: 50vh;
+  margin: 20px;
+}
+
+path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  animation: draw 8s cubic-bezier(0.3, 0.4, 0.5, 0.2) forwards;
+}
+
+/* Botón */
+
+div {
+  display: inline-block;
+  background-color: var(--secondary-dark);
+  cursor: pointer;
+  padding: 27px 8px;
+  transform: rotate(-45deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+div:hover {
+  transform: scale(1.1) rotate(-45deg);
+  background-color: var(--secondary);
+}
+
+span {
+  display: inline-block;
+  font-size: large;
+  text-transform: uppercase;
+  transform: rotate(45deg);
+}

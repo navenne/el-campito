@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Laura Hidalgo Rivera" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/filter_page.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../js/nav.js"></script>
+    <noscript>Your browser does not support JavaScript!</noscript>
+    <title>Laura Hidalgo Rivera</title>
+  </head>
+  <body>
+    <header>
+        <h1>“El Campito”</h1>
+        <span class="material-icons md-48 menu">menu</span>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <a id="close"><span class="material-icons md-48">close</span></a>
+          </li>
+          <li><a href="">Log In</a></li>
+          <li><a href="">Favorites</a></li>
+          <li><a href="">Notifications</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section class="section1">
+          <form action="" method="get">
+            <label class="form_item"
+              ><span class="material-icons">place</span
+              ><input type="search" placeholder="Where to...?"
+            /></label>
+            <div class="form_item">
+              <label for="checkin">Check-in</label
+              ><input id="checkin" type="date" />
+            </div>
+            <div class="form_item">
+              <label for="checkout">Check-out</label
+              ><input id="checkout" type="date" />
+            </div>
+            <input type="submit" value="SEARCH" />
+          </form>
+        </section>
+        <section class="section2">
+          <article>
+            <img src="../img/house1.jpg" alt="house1" />
+            <div class="house_content">
+              <h3>The Old Potting Shed</h3>
+              <span class="house_location">York, United Kingdom</span>
+              <div class="house_info">
+                <div class="icons">
+                  <span class="material-icons">wifi</span>
+                  <span class="material-icons">pets</span>
+                </div>
+                <span class="price"><span>60€</span>/night</span>
+              </div>
+              <p>
+                Set in York in the North Yorkshire region. The Old Potting Shed
+                features a garden...<a href="#">Show more</a>
+              </p>
+            </div>
+            <input type="button" value="RESERVE" />
+          </article>
+          <article>
+            <img src="../img/house4.jpg" alt="house4" />
+            <div class="house_content">
+              <h3>Tromsø Lodge & Camping</h3>
+              <span class="house_location">Tromsø, Norway</span>
+              <div class="house_info">
+                <div>
+                  <span class="material-icons">wifi</span>
+                  <span class="material-icons">pets</span>
+                </div>
+                <span class="price"><span>70€</span>/night</span>
+              </div>
+              <p>
+                Located by the Tromsdalselva River, this property is just 5
+                minutes’ drive from Tromsø city center...<a href="#">Show more</a>
+              </p>
+            </div>
+            <input type="button" value="RESERVE" />
+          </article>
+        </section>
+      </main>
+      <footer>
+        <p>Laura Hidalgo Rivera - <span>“El Campito”</span></p>
+          <div class="redes">
+            <div>
+              <a href="https://www.linkedin.com/in/laura-hidalgo-rivera/">
+                <img src="../img/linkedin.svg" alt="linkedin" />
+                <p>LinkedIn</p>
+              </a>
+            </div>
+            <div>
+              <a href="https://github.com/navenne">
+                <img src="../img/github.svg" alt="github" />
+                <p>GitHub</p>
+              </a>
+            </div>
+            <div>
+              <a href="https://navenne.itch.io/coding-buggies">
+                <img src="../img/itch.svg" alt="itch.io" />
+                <p>itch.io</p>
+              </a>
+            </div>
+          </div>
+          <div class="footer_info">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy & Cookies</a>
+            <a href="#">Legal Information</a>
+          </div>
+      </footer>
+  </body>
+  </html>
