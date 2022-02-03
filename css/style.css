@@ -1,5 +1,3 @@
-/* Colores */
-
 :root {
   --primary: #add681;
   --primary-light: #e0ffb1;
@@ -16,9 +14,23 @@ html {
 }
 
 body {
-  font-family: Montserrat, Roboto, Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Roboto, Montserrat, Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
   font-size: 16px;
   margin: 0;
+}
+
+@keyframes fade_in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade_in {
+  animation: fade_in 0.5s;
 }
 
 @keyframes fade_out {
@@ -34,7 +46,125 @@ body {
   animation: fade_out 0.5s;
 }
 
-main {
+header {
+  display: flex;
+  flex-flow: row-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-dark);
+  padding: 20px;
+}
+
+.material-icons.md-48 {
+  position: absolute;
+  left: 15px;
+  font-size: 48px;
+}
+
+nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-light);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color: var(--secondary-dark);
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: var(--secondary-dark);
+  transition: background-color 0.8s;
+}
+
+::-webkit-scrollbar-thumb:horizontal:hover {
+  background-color: var(--primary-dark);
+}
+
+
+/* Footer */
+
+footer {
+  text-align: center;
+  background-color: var(--primary-dark);
+  padding: 1%;
+}
+
+footer span {
+  font-family: "Abril Fatface", cursive;
+  text-transform: uppercase;
+}
+
+footer img {
+  width: 64px;
+  height: 64px;
+}
+
+footer a {
+  color: black;
+  text-decoration-color: var(--secondary);
+}
+
+footer a:hover {
+  color: var(--secondary-light);
+}
+
+.redes div {
+  display: inline-block;
+  padding: 0 0.5%;
+}
+
+.redes a {
+  text-decoration-style: wavy;
+}
+
+.footer_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_info a {
+  padding: 5px;
+}
+
+.intro {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,6 +177,7 @@ h1 {
   font-family: 'Abril Fatface', cursive;
   text-transform: uppercase;
   font-size: 35px;
+  margin: 0;
 }
 
 /* Imagen */
@@ -72,7 +203,7 @@ path {
 
 /* Botón */
 
-div {
+.intro_button {
   display: inline-block;
   background-color: var(--secondary-dark);
   cursor: pointer;
@@ -81,14 +212,231 @@ div {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-div:hover {
+.intro_button:hover {
   transform: scale(1.1) rotate(-45deg);
   background-color: var(--secondary);
 }
 
-span {
+.intro_enter {
   display: inline-block;
   font-size: large;
   text-transform: uppercase;
   transform: rotate(45deg);
+}
+
+/* Search Page */
+
+.search_page_section1 {
+  background-color: var(--primary);
+  padding: 30px;
+}
+
+.search_page_section1 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 20px;
+}
+
+.search_page_section1 input {
+  margin: 15px;
+  background-color: var(--secondary);
+  border: none;
+}
+
+.search_page_section1 input[type="submit"] {
+  margin: 15px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--secondary-dark);
+}
+
+.form_item {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+article img {
+  width: 100%;
+}
+
+.search_page_section2 {
+  padding: 10px 30px 30px 30px;
+  background-color: var(--secondary-light);
+}
+
+.search_page_section2 h2, .search_page_section3 h2 {
+  font-family: "Montserrat", sans-serif;
+  margin: 15px 0px;
+}
+
+.slider {
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.19);
+}
+
+.slider img {
+  scroll-snap-align: center;
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.search_page_section3 {
+  background-color: var(--primary-light);
+  padding: 10px 30px 30px 30px;
+}
+
+.search_page_article {
+  background-color: white;
+  margin: 20px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+h3 {
+  margin-bottom: 4px;
+}
+
+.search_house_content {
+  padding: 0px 20px;
+}
+
+.search_house_location {
+  opacity: 0.7;
+}
+
+.search_house_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search_house_content a {
+  color: var(--primary-dark);
+}
+
+.search_reserve {
+  width: 100%;
+  background-color: var(--secondary-dark);
+  border: none;
+  padding: 10px 0px;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.price span {
+  color: var(--primary-dark);
+}
+
+/* Filter Page*/
+
+/* Aside */
+aside {
+  background-color: var(--primary-light);
+  padding: 5px;
+}
+
+aside ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+aside ul li,
+aside li div {
+  display: flex;
+  align-items: center;
+}
+
+#open_sortby select {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+#filters fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+#filters {
+  width: 100%;
+  height: 0;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-light);
+  overflow-y: hidden;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+.filter_page_section2 {
+  padding: 10px 30px 30px 30px;
+  background-color: var(--secondary-light);
+}
+
+/* House Page */
+
+.house_article {
+  background-color: var(--secondary-light);
+}
+
+.house_header {
+  padding: 20px;
+  text-align: left;
+  background-color: var(--primary-light);
+}
+
+.house_header h2 {
+  margin: 0 0 5px 0;
+}
+
+.house_reserve {
+  background-color: var(--secondary-dark);
+  border: none;
+  padding: 10px 10px;
+}
+
+.house_content {
+  padding: 10px 20px;
+}
+
+.house_location {
+  opacity: 0.7;
+  margin: 5px 0;
+}
+
+.house_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.icons ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.icons ul li {
+  display: flex;
+  align-items: flex-end;
+}
+
+.icons ul li span {
+  padding-right: 10px;
 }

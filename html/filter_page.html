@@ -5,7 +5,7 @@
     <meta name="author" content="Laura Hidalgo Rivera" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="../css/filter_page.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -34,7 +34,7 @@
         <li><a href="">Notifications</a></li>
       </ul>
     </nav>
-    <section class="section1">
+    <section class="search_page_section1">
       <form action="" method="get">
         <label class="form_item"
           ><span class="material-icons">place</span
@@ -88,8 +88,8 @@
       </form>
     </aside>
     <main>
-      <section class="section2">
-        <article>
+      <section class="filter_page_section2">
+        <article class="search_page_article">
           <img src="../img/house1.jpg" alt="house1" />
           <div class="house_content">
             <h3>The Old Potting Shed</h3>
@@ -104,17 +104,17 @@
             <p>1 room</p>
             <p>
               Set in York in the North Yorkshire region. The Old Potting Shed
-              features a garden...<a href="#">Show more</a>
+              features a garden...<a href="house1.html">Show more</a>
             </p>
           </div>
-          <input type="button" id="reserve_house1" value="RESERVE" />
+          <a href="house1.html"><input type="button" class="search_reserve" value="RESERVE" /></a>
         </article>
-        <article>
+        <article class="search_page_article">
           <img src="../img/house4.jpg" alt="house4" />
-          <div class="house_content">
+          <div class="search_house_content">
             <h3>Tromsø Lodge & Camping</h3>
-            <span class="house_location">Tromsø, Norway</span>
-            <div class="house_info">
+            <span class="search_house_location">Tromsø, Norway</span>
+            <div class="search_house_info">
               <div>
                 <span class="material-icons">wifi</span>
                 <span class="material-icons">pets</span>
@@ -124,10 +124,10 @@
             <p>2 rooms</p>
             <p>
               Located by the Tromsdalselva River, this property is just 5
-              minutes’ drive from Tromsø city center...<a href="#">Show more</a>
+              minutes’ drive from Tromsø city center...<a href="house4.html">Show more</a>
             </p>
           </div>
-          <input type="button" id="reserve_house4" value="RESERVE" />
+          <a href="house4.html"><input type="button" class="search_reserve" value="RESERVE" /></a>
         </article>
       </section>
     </main>
