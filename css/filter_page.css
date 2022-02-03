@@ -23,7 +23,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: justify;
 }
 
@@ -89,7 +89,7 @@ nav ul {
   padding: 30px;
 }
 
-form {
+.section1 form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,16 +98,16 @@ form {
   padding: 20px;
 }
 
-form input {
+.section1 form input {
   margin: 15px;
   background-color: var(--secondary);
   border: none;
 }
 
-form input[type="submit"] {
+.section1 form input[type="submit"] {
   margin: 15px;
   padding: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: var(--secondary-dark);
 }
 
@@ -119,30 +119,56 @@ form input[type="submit"] {
   justify-content: space-between;
 }
 
-/* Slider*/
+/* Aside */
+aside {
+  background-color: var(--primary-light);
+  padding: 5px;
+}
+
+aside ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+aside ul li,
+aside li div {
+  display: flex;
+  align-items: center;
+}
+
+#open_sortby select {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+}
+
+#filters fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+#filters {
+  width: 100%;
+  height: 0;
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-light);
+  overflow-y: hidden;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+/* Section 2 */
 
 .section2 {
   padding: 10px 30px 30px 30px;
   background-color: var(--secondary-light);
-}
-
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  margin: 15px 0px;
-}
-
-.slider {
-  scroll-snap-type: x mandatory;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.19);
-}
-
-.slider img {
-  scroll-snap-align: center;
-  flex: 0 0 100%;
-  width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -167,15 +193,8 @@ h2 {
   background-color: var(--primary-dark);
 }
 
-/* Section 3*/
-
-.section3 {
-  background-color: var(--primary-light);
-  padding: 10px 30px 30px 30px;
-}
-
-article img{
- width: 100%;
+article img {
+  width: 100%;
 }
 
 article {
@@ -230,7 +249,7 @@ footer {
 }
 
 footer span {
-  font-family: 'Abril Fatface', cursive;
+  font-family: "Abril Fatface", cursive;
   text-transform: uppercase;
 }
 
