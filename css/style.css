@@ -18,6 +18,7 @@ body {
   text-align: justify;
   font-size: 16px;
   margin: 0;
+  background-color: var(--primary);
 }
 
 @keyframes fade_in {
@@ -72,6 +73,7 @@ nav {
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
+  font-family: Montserrat, sans-serif;
 }
 
 nav a {
@@ -439,4 +441,76 @@ aside li div {
 
 .icons ul li span {
   padding-right: 10px;
+}
+
+@media (min-width: 800px) {
+  .material-icons.md-48 {
+    display: none;
+  }
+
+  nav {
+    height: initial;
+    width: initial;
+    position: initial;
+    padding-top: initial;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .login {
+    padding-left: 20px;
+    position: absolute;
+    left: 0;
+  }
+
+  nav li {
+    margin: 0 20px;
+  }
+
+  nav a {
+    padding: 0;
+  }
+
+  .search_page_article {
+    display: flex;
+    
+  }
+
+  .search_page_article input[type="button"] {
+    padding: 10px 40px;
+  }
+
+  .img_container {
+    max-width: 410px;
+  }
+
+  .img_container img {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .house_content_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search_page_section1 form {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .form_item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  
 }
