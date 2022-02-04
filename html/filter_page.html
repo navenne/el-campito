@@ -21,7 +21,7 @@
   </head>
   <body>
     <header>
-      <h1>“El Campito”</h1>
+      <h1><a href="search_page.html">“El Campito”</a></h1>
       <span class="material-icons md-48 menu">menu</span>
     </header>
     <nav>
@@ -38,107 +38,117 @@
       <form action="" method="get">
         <label class="form_item"
           ><span class="material-icons">place</span
-          ><input type="search" placeholder="Where to...?"
+          ><input type="search" placeholder="Where to...?" required
         /></label>
         <div class="form_item">
           <label for="checkin">Check-in</label
-          ><input id="checkin" type="date" />
+          ><input id="checkin" type="date" required/>
         </div>
         <div class="form_item">
           <label for="checkout">Check-out</label
-          ><input id="checkout" type="date" />
+          ><input id="checkout" type="date" required/>
         </div>
         <input type="submit" value="SEARCH" />
       </form>
     </section>
-    <aside>
-      <ul>
-        <li id="open_sortby">
-          <span class="material-icons">sort</span>Sort
-          <select>
-            <option value="recommended">Recommended</option>
-            <option value="newest">Newest</option>
-            <option value="price_lowtohigh">Price: Low to High</option>
-            <option value="price_hightolow">Price: High to Low</option>
-          </select>
-        </li>
-        <li id="open_filters"><span class="material-icons">filter_alt</span>Filter</li>
-        <li id="open_map"><span class="material-icons">map</span>Map</li>
-      </ul>
+    <div class="content_wrapper">
+      <aside>
+        <ul>
+          <li id="open_sortby">
+            <span class="material-icons">sort</span>Sort
+            <select>
+              <option value="recommended">Recommended</option>
+              <option value="newest">Newest</option>
+              <option value="price_lowtohigh">Price: Low to High</option>
+              <option value="price_hightolow">Price: High to Low</option>
+            </select>
+          </li>
+          <li id="open_filters">
+            <span class="material-icons">filter_alt</span>Filter
+          </li>
+          <li id="open_map"><span class="material-icons">map</span>Map
+          </li>
+        </ul>
+        <img src="../img/map.PNG" alt="map">
 
-      <form id="filters">
+        <form id="filters">
+          <fieldset>
+            <legend>Rooms</legend>
+            <label><input type="checkbox" />1</label>
+            <label><input type="checkbox" />2</label>
+            <label><input type="checkbox" />3</label>
+            <label><input type="checkbox" />4+</label>
+          </fieldset>
 
-        <fieldset>
-          <legend>Rooms</legend>
-          <label><input type="checkbox" />1</label>
-          <label><input type="checkbox" />2</label>
-          <label><input type="checkbox" />3</label>
-          <label><input type="checkbox" />4+</label>
-        </fieldset>
-
-        <fieldset>
-          <legend>Amenities</legend>
-          <label><input type="checkbox" />Wi-Fi</label>
-          <label><input type="checkbox" />Pool</label>
-          <label><input type="checkbox" />Pets Allowed</label>
-          <label><input type="checkbox" />Hiking</label>
-          <label><input type="checkbox" />Canoeing</label>
-        </fieldset>
-
-      </form>
-    </aside>
-    <main>
-      <section class="filter_page_section2">
-        <article class="search_page_article">
-          <div class="img_container">
-          <img src="../img/house1.jpg" alt="house1" />
-        </div>
-        <div class="house_content_container">
-          <div class="search_house_content">
-            <h3>The Old Potting Shed</h3>
-            <span class="search_house_location">York, United Kingdom</span>
-            <div class="search_house_info">
-              <div class="icons">
-                <span class="material-icons">wifi</span>
-                <span class="material-icons">pets</span>
-              </div>
-              <span class="price"><span>60€</span>/night</span>
+          <fieldset>
+            <legend>Amenities</legend>
+            <label><input type="checkbox" />Wi-Fi</label>
+            <label><input type="checkbox" />Pool</label>
+            <label><input type="checkbox" />Pets Allowed</label>
+            <label><input type="checkbox" />Hiking</label>
+            <label><input type="checkbox" />Canoeing</label>
+          </fieldset>
+        </form>
+      </aside>
+      <main>
+        <section class="filter_page_section2">
+          <article class="search_page_article">
+            <div class="img_container">
+              <img src="../img/house1.jpg" alt="house1" />
             </div>
-            <p>1 room</p>
-            <p>
-              Set in York in the North Yorkshire region. The Old Potting Shed
-              features a garden...<a href="house1.html">Show more</a>
-            </p>
-          </div>
-          <a href="house1.html"><input type="button" class="search_reserve" value="RESERVE" /></a>
-        </div>
-        </article>
-        <article class="search_page_article">
-        <div class="img_container">
-          <img src="../img/house4.jpg" alt="house4" />
-        </div>
-        <div class="house_content_container">
-          <div class="search_house_content">
-            <h3>Tromsø Lodge & Camping</h3>
-            <span class="search_house_location">Tromsø, Norway</span>
-            <div class="search_house_info">
-              <div>
-                <span class="material-icons">wifi</span>
-                <span class="material-icons">pets</span>
+            <div class="house_content_container">
+              <div class="search_house_content">
+                <h3>The Old Potting Shed</h3>
+                <span class="search_house_location">York, United Kingdom</span>
+                <div class="search_house_info">
+                  <div class="icons">
+                    <span class="material-icons">wifi</span>
+                    <span class="material-icons">pets</span>
+                  </div>
+                  <span class="price"><span>60€</span>/night</span>
+                </div>
+                <p>1 room</p>
+                <p>
+                  Set in York in the North Yorkshire region. The Old Potting
+                  Shed features a garden...<a href="house1.html">Show more</a>
+                </p>
               </div>
-              <span class="price"><span>70€</span>/night</span>
+              <a href="house1.html"
+                ><input type="button" class="search_reserve" value="RESERVE"
+              /></a>
             </div>
-            <p>2 rooms</p>
-            <p>
-              Located by the Tromsdalselva River, this property is just 5
-              minutes’ drive from Tromsø city center...<a href="house4.html">Show more</a>
-            </p>
-          </div>
-          <a href="house4.html"><input type="button" class="search_reserve" value="RESERVE" /></a>
-        </div>
-        </article>
-      </section>
-    </main>
+          </article>
+          <article class="search_page_article">
+            <div class="img_container">
+              <img src="../img/house4.jpg" alt="house4" />
+            </div>
+            <div class="house_content_container">
+              <div class="search_house_content">
+                <h3>Tromsø Lodge & Camping</h3>
+                <span class="search_house_location">Tromsø, Norway</span>
+                <div class="search_house_info">
+                  <div>
+                    <span class="material-icons">wifi</span>
+                    <span class="material-icons">pets</span>
+                  </div>
+                  <span class="price"><span>70€</span>/night</span>
+                </div>
+                <p>2 rooms</p>
+                <p>
+                  Located by the Tromsdalselva River, this property is just 5
+                  minutes’ drive from Tromsø city center...<a href="house4.html"
+                    >Show more</a
+                  >
+                </p>
+              </div>
+              <a href="house4.html"
+                ><input type="button" class="search_reserve" value="RESERVE"
+              /></a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
     <footer>
       <p>Laura Hidalgo Rivera - <span>“El Campito”</span></p>
       <div class="redes">

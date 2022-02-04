@@ -39,15 +39,15 @@
         <form>
           <label class="form_item"
             ><span class="material-icons">place</span
-            ><input type="search" placeholder="Where to...?"
+            ><input type="search" placeholder="Where to...?" pattern="\S+"
           /></label>
           <div class="form_item">
             <label for="checkin">Check-in</label
-            ><input id="checkin" type="date" />
+            ><input id="checkin" type="date" required/>
           </div>
           <div class="form_item">
             <label for="checkout">Check-out</label
-            ><input id="checkout" type="date" />
+            ><input id="checkout" type="date" required/>
           </div>
           <input type="submit" value="SEARCH" />
         </form>
@@ -63,6 +63,7 @@
       </section>
       <section class="search_page_section3">
         <h2>Explore</h2>
+        <div>
         <article class="search_page_article">
           <div class="img_container">
           <img src="../img/house1.jpg" alt="house1" />
@@ -96,7 +97,7 @@
             <h3>Tromsø Lodge & Camping</h3>
             <span class="search_house_location">Tromsø, Norway</span>
             <div class="search_house_info">
-              <div>
+              <div class="icons">
                 <span class="material-icons">wifi</span>
                 <span class="material-icons">pets</span>
               </div>
@@ -111,6 +112,7 @@
           <a href="house4.html"><input type="button" class="search_reserve" value="RESERVE" /></a>
         </div>
         </article>
+      </div>
       </section>
     </main>
     <footer>
